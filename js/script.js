@@ -1,18 +1,29 @@
- // Modal
- $(function () {
-    $('#moditoModal').on('show.bs.modal', function (e) {
-        $('#moditoModal').focus();
-    })            
-}); 
-$('#moditoModal').on('show.bs.modal', function (event) {
-    var modal = $(this)
-    modal.find('.modal-body input').val("")
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    if (button[0].id == 'chatButton') {
-        var question = $('#chatQuestion').val()
-        $('#chatQuestion').val('')
-    } else {
-        var question = button.data('question') // Extract info from data-* attributes
-    }
-    modal.find('.modal-body input').val(question)
-  })
+// Modal
+document.addEventListener('DOMContentLoaded', function () {
+    var modalElement = document.getElementById('moditoModal');
+
+    modalElement.addEventListener('show.bs.modal', function () {
+        modalElement.focus();
+    });
+
+    modalElement.addEventListener('show.bs.modal', function (event) {
+        // Limpiar el valor del input en el modal
+        var inputElement = modalElement.querySelector('.modal-body input');
+        inputElement.value = "";
+
+        // Botón que activó el modal
+        var button = event.relatedTarget; // Botón que disparó el modal
+        var question = "";
+
+        if (button.id === 'chatButton') {
+            var chatQuestion = document.getElementById('chatQuestion');
+            question = chatQuestion.value;
+            chatQuestion.value = ''; // Limpiar el valor de la pregunta en el input
+        } else {
+            question = button.getAttribute('data-bs-question'); // Extraer la info de los atributos data-*
+        }
+
+        // Establecer el valor en el input del modal
+        inputElement.value = question;
+    });
+});
