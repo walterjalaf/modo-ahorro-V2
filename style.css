@@ -564,3 +564,53 @@ box-shadow: 0 0 40px 2px var(--verdeModoAhorro)
 }
 	
 /* end Modal */
+
+
+
+/***********************/
+/*     Request     */
+/***********************/
+.boxwsp-form-control-input, .boxwsp-form-control-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    
+}
+
+.boxwsp-form-group {
+    margin-bottom: 15px;
+}
+
+.boxwsp-form-group.text-center {
+    text-align: center;
+}
+
+.boxwsp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--verdeModoAhorro);
+    border-radius: 5px;
+    padding: 1rem;
+   
+}
+
+.boxwsp-whatsappButton .img{
+	border: none;
+}
+
+.boxwsp-button {
+	border: 2px solid var(--verdeModoAhorro);;
+	outline: none;
+	transition: opacity 0.3s ease;
+    color: #000;
+    background:#fff ;
+}
+
+.boxwsp-button:hover {
+    background: #36BF53;
+    scale: 1.1;
+}
+
+
