@@ -398,38 +398,162 @@
 <!-- Contacto -->
             
 <!-- Contacto -->
- <div class="container">
+ <section id="request" class="form-1">
+  <div class="container">
     <div class="row">
-        <div class="col-6"></div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
-            <form>
-                <fieldset disabled>
-                  <legend>Disabled fieldset example</legend>
-                  <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Disabled input</label>
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-                  </div>
-                  <div class="mb-3">
-                    <label for="disabledSelect" class="form-label">Disabled select menu</label>
-                    <select id="disabledSelect" class="form-select">
-                      <option>Disabled select</option>
-                    </select>
-                  </div>
-                  <div class="mb-3">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                      <label class="form-check-label" for="disabledFieldsetCheck">
-                        Can't check this
-                      </label>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </fieldset>
-              </form>
+      <div class="col-4"></div>
+      <div class="col-4">
+        <div class="container">
+          <div class="text-center">
+            <h2>Contáctese rápidamente por WhatsApp</h2>
+          </div>
+          <form id="boxwsp-requestForm" data-toggle="validator" data-focus="false">
+            <!-- Viejo -->
+
+            <div class="boxwsp-form-group">
+                <input type="text" class="boxwsp-form-control-input" id="boxwsp-rname"
+                    placeholder="Escriba su nombre" name="rname" required>
+            </div>
+
+            <div class="boxwsp-form-group">
+              <select class="boxwsp-form-control-select" id="boxwsp-rselect" required>
+                  <option class="boxwsp-select-option" value="" disabled selected>Seleccione
+                      un
+                      servicio...</option>
+                  <option class="boxwsp-select-option" value="Cursos de la Academia">Intereses
+                      de
+                      Comunes de Servicio - Cursos de la Academia</option>
+                  <option class="boxwsp-select-option" value="Diagnóstico Energético">
+                      Intereses de
+                      Comunes de Servicio - Diagnóstico Energético</option>
+              </select>
+          
+            </div>
+            <div class="boxwsp-form-group" id="boxwsp-diagnosticoOptions" style="display: none;" >
+              <label>Seleccione el tipo de inmueble:</label>
+              <select class="boxwsp-form-control-select" id="boxwsp-inmuebleSelect">
+                <option class="boxwsp-select-option" value="Hogar">Hogar</option>
+                <option class="boxwsp-select-option" value="Comercio">Comercio</option>
+                <option class="boxwsp-select-option" value="Pyme pequeña">Pyme de
+                        dimensiones
+                        pequeñas</option>
+                <option class="boxwsp-select-option" value="Pyme grande">Pyme de grandes
+                        dimensiones
+                </option>
+              </select>
+            </div>
+            <!--  end Viejo -->
+
+            <!-- New form -->
+
+            <!-- <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Nombre</span>
+              <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" id="boxwsp-rname" >
+            </div>
+            
+            
+            
+            
+            <div class="input-group mb-3">
+              <label class="input-group-text" id="boxwsp-rselect">Consulta</label>
+              
+              <select class="form-select" id="inputGroupSelect01">
+                
+                <option  selected value="Cursos de la Academia">Cursos de la Academia</option>
+                <option value="Diagnóstico Energético">Diagnóstico Energético</option>
+              </select>
+            </div>
+
+
+            <div class="input-group mb-3">
+              <div class="boxwsp-form-group" id="boxwsp-diagnosticoOptions" style="display: none;" >
+                <label >Inmueble</label>
+              
+              <select class="form-select" id="boxwsp-inmuebleSelect">
+                
+                <option class="boxwsp-select-option" value="Hogar">Hogar</option>
+                <option class="boxwsp-select-option" value="Comercio">Comercio</option>
+                <option class="boxwsp-select-option" value="Pyme pequeña">Pyme de
+                        dimensiones
+                        pequeñas</option>
+                <option class="boxwsp-select-option" value="Pyme grande">Pyme de grandes
+                        dimensiones
+                </option>
+              </select>
+              </div>
+            </div> -->
+
+            
+
+          <!-- end New form -->
+
+          
+          <!-- end omar -->
+          
+                 
+
+
+
+            
+            <div class="row">
+              
+               <div class="col-12">
+                <div class="boxwsp-form-group">
+                  <button type="button" class="boxwsp-button" id="boxwsp-whatsappButton">
+                    <strong> Enviar consulta a WhatsApp</strong>
+                      
+                      
+                  </button>
+                </div>
+               </div>
+              
+              
+            </div>
+        </form>
+
         </div>
+      </div>
+      <div class="col-4"></div>
+
     </div>
- </div>
+
+
+
+  </div>
+
+ </section>
 <!-- end Contacto -->
+
+<!-- sript wsp -->
+<script>
+  document.getElementById('boxwsp-rselect').addEventListener('change', function () {
+      var diagnosticoOptions = document.getElementById('boxwsp-diagnosticoOptions');
+      diagnosticoOptions.style.display = this.value === 'Diagnóstico Energético' ? 'block' : 'none';
+  });
+
+  document.getElementById('boxwsp-whatsappButton').addEventListener('click', function () {
+      var name = document.getElementById('boxwsp-rname').value;
+      var interest = document.getElementById('boxwsp-rselect').value;
+      var inmueble = document.getElementById('boxwsp-inmuebleSelect')?.value || '';
+
+      var message = interest === 'Diagnóstico Energético'
+          ? `Hola, soy ${name} y quiero consultar el servicio de ${interest} para ${inmueble}.`
+          : `Hola, soy ${name} y estoy interesado en ${interest}.`;
+
+      var whatsappUrl = `https://wa.me/+54264154533704?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
 
 <!-- validates forms --> 
   <script src="js/scripts.js"></script> <!-- Custom scripts -->
