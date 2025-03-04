@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 
 :root {
+	--verdeModoAhorro: #36BF53;
 	--verdeoscuro: #02913F;
 	--verdeclaro: #6CC52B;
-	--verdeModoAhorro: #36BF53;
 	--amarillUno: #D7E107;
 	--amarilloDos: #FFD426;
 	--naranja: #FF850E;
@@ -16,7 +16,7 @@
   --white: hsl(0, 0%, 100%);
   /* Fonts */
   --font-title: "Montserrat", sans-serif;
-  --font-text: "Lato", sans-serif;
+  --font-text: "Montserrat", sans-serif;
 
 
 
@@ -28,20 +28,25 @@ body {
     margin: 0;
     font: 1rem/1.5 var(--bs-font-sans-serif);
     font-family: "Inter-Medium", sans-serif;
+    background: rgb(255,255,255);
+    background: linear-gradient(292deg, rgba(255,255,255,1) 0%, rgba(54,191,83,1) 31%, rgba(255,255,255,1) 62%);
 }
 
- 
 
 #home .titulo-home {
     margin: 6rem 4rem 4rem 4rem;
 }
 
+/* presentacion-beneficios */
+
+
+
 
 #beneficios .row {
-    margin: 4rem;
+    margin: 12rem;
 }
 #beneficios .card-body{
-    margin: 2rem;
+    margin: 3rem;
 }
 
 #beneficios .card {
@@ -171,10 +176,16 @@ box-shadow: 0 0 40px 2px var(--verdeModoAhorro)
 
 /* *****************   Fases ************ */
 
-/* Cardes */
+/* fases-diagnostico*/
+
+#fases-diagnostico {
+    background: #fff;
+
+}
 .cardes{
 	display: flex;
 	justify-content: space-between;
+    
 }
 
 .cardes .carde {
