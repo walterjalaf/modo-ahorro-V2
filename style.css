@@ -244,9 +244,9 @@ box-shadow: 0 0 40px 2px var(--verdeModoAhorro)
 
 /* Media */
 @media (max-width: 1001px){
-	.container{
+	/* .container{
 		width: 800px;
-	}
+	} */
 	.back h3{
 		font-size: 30px;
 	}
