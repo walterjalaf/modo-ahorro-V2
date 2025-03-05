@@ -1,3 +1,15 @@
+// Preloader
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("preloader").classList.add('fade-out');
+    setTimeout(() =>{
+        document.getElementById("preloader-container").classList.add('fade-out');
+    }, 2000);
+    
+    setTimeout(() => {
+        document.getElementById('preloader-container').style.display = 'none';
+    }, 4000);
+});
+
 // Modal
 document.addEventListener('DOMContentLoaded', function () {
     var modalElement = document.getElementById('moditoModal');

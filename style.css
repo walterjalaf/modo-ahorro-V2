@@ -32,7 +32,51 @@ body {
     background: linear-gradient(292deg, rgba(255,255,255,1) 0%, rgba(54,191,83,1) 31%, rgba(255,255,255,1) 62%);
 }
 
+#home, #beneficios, #fases-diagnostico, #request {
+    padding-top: 100px;
+}
 
+/* Preloader */
+#preloader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 4s;
+}
+
+.preloader{width:100px;height:70px;margin:50px auto;position:relative}
+.preloader span{display:block;width:5px;height:10px;background:#02913F;position:absolute;bottom:0;animation:preloading 2.25s infinite ease-in-out}
+.preloader span:nth-child(3){left:22px;animation-delay:.4s}
+.preloader span:nth-child(4){left:33px;animation-delay:.6s}
+.preloader span:nth-child(5){left:44px;animation-delay:.8s}
+.preloader span:nth-child(2){left:11px;animation-delay:.2s}
+.preloader span:nth-child(6){left:55px;animation-delay:1s}
+.preloader span:nth-child(7){left:66px;animation-delay:1.2s}
+.preloader span:nth-child(8){left:77px;animation-delay:1.4s}
+.preloader span:nth-child(9){left:88px;animation-delay:1.6s}
+@-webkit-keyframes preloading{
+	0%{height:10px;transform:translateY(0);background:#6CC52B}
+	25%{height:60px;transform:translateY(15px);background:#D7E107}
+	50%{height:10px;transform:translateY(-10px);background:#FF850E}
+	100%{height:10px;transform:translateY(0);background:#FF1222}
+}
+@keyframes preloading{
+	0%{height:10px;transform:translateY(0);background:#6CC52B}
+	25%{height:60px;transform:translateY(15px);background:#D7E107}
+	50%{height:10px;transform:translateY(-10px);background:#FF850E}
+	100%{height:10px;transform:translateY(0);background:#FF1222}
+}
+
+/* Home */
 #home .titulo-home {
     margin: 6rem 4rem 4rem 4rem;
 }
