@@ -30,7 +30,9 @@ body {
     font-family: "Inter-Medium", sans-serif;
 }
 
- 
+#home, #beneficios, #fases-diagnostico, #request {
+    padding-top: 100px;
+}
 
 #home .titulo-home {
     margin: 6rem 4rem 4rem 4rem;
