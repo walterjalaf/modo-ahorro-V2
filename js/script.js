@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
     
     setTimeout(() => {
-        document.getElementById('preloader').style.display = 'none';
+        document.getElementById('preloader-container').style.display = 'none';
     }, 4000);
 });
 
