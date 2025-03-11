@@ -28,12 +28,16 @@ body {
     margin: 0;
     font: 1rem/1.5 var(--bs-font-sans-serif);
     font-family: "Inter-Medium", sans-serif;
-    background: rgb(255,255,255);
-    background: linear-gradient(292deg, rgba(255,255,255,1) 0%, rgba(54,191,83,1) 31%, rgba(255,255,255,1) 62%);
+    /* background: rgb(255,255,255);
+    background: linear-gradient(292deg, rgba(255,255,255,1) 0%, rgba(54,191,83,1) 31%, rgba(255,255,255,1) 62%); */
 }
 
 #home, #beneficios, #fases-diagnostico, #request {
     padding-top: 100px;
+}
+
+#home .row {
+margin: 4rem;
 }
 
 /* Preloader */
@@ -84,7 +88,9 @@ body {
 /* presentacion-beneficios */
 
 
-
+#beneficios {
+    /* background: radial-gradient(circle, rgba(54,191,83,1) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%); */
+}
 
 #beneficios .row {
     margin: 12rem;
@@ -95,13 +101,8 @@ body {
 
 #beneficios .card {
      
-    /* display: grid; */
-    /* place-items: center; */
-    /* width: 100vw;  */
-    /* align-items: center; */
-    /* max-width: 50rem; */
-    /* height: 20rem; */
-    /* overflow: hidden; */
+    
+    background: var(--verdeModoAhorro);
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
     
@@ -111,9 +112,11 @@ body {
     animation-name: show;
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
+    color: #fff;
 }
 
 #beneficios .card__content {
+    text-shadow: 0 10px 20px rgb(0 0 0 / 18%);
     --flow-space: 0.9375rem;
     display: flex;
     flex-direction: column;
@@ -123,12 +126,17 @@ body {
     /* padding: 12% 1.25rem 1.875rem; */
     
 }
+#beneficios .card__description {
+    text-shadow: 0 10px 20px rgb(0 0 0 / 18%);
+    font-size: 20px;
+}
 
   
 #beneficios .card__title {
     /* position: relative; */
     /* width: fit-content; */
     width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+    text-shadow: 0 10px 20px rgb(0 0 0 / 18%);
 }
  
 @media (any-hover: hover) and (any-pointer: fine) {
@@ -160,6 +168,8 @@ body {
     .card:focus-within {
       transform: scale(1.05);
       transition: transform 500ms ease-in;
+      background: linear-gradient(270deg, rgba(2,145,63,1) 0%, rgba(54,191,83,1) 35%, rgba(108,197,43,1) 100%);
+      
     }
   
     #beneficios .card:hover .card__content,
@@ -176,6 +186,7 @@ body {
     #beneficios .card:hover .card__background,
     .card:focus-within .card__background {
       transform: scale(1.3);
+      
     }
   
     #beneficios .card:hover .card__content--container > :not(.card__title),
@@ -194,6 +205,7 @@ body {
       transform-origin: left;
       transition: opacity 50ms ease-in, transform 50ms ease-in;
       transition-delay: 50ms;
+      
     }
 }
 
@@ -213,7 +225,11 @@ to {
 
 
 cursor: pointer;
-box-shadow: 0 0 40px 2px var(--verdeModoAhorro)
+box-shadow: 0 0 40px 2px var(--verdeModoAhorro);
+/* transition: opacity 50ms ease-in, transform 50ms ease-in;
+transition-delay: 50ms;
+background: var(--verdeModoAhorro); */
+
 
 }
 
@@ -534,7 +550,8 @@ box-shadow: 0 0 40px 2px var(--verdeModoAhorro)
 }
 .card:hover {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    border-color: var(--verdeModoAhorro);
+    border-color: var(--verdeclaro);
+   
 }
 
 /* ********** Modal ************* */
@@ -564,8 +581,9 @@ box-shadow: 0 0 40px 2px var(--verdeModoAhorro)
 }
 
 .message.bot {
-    background-color: #b3ff7d;
+    background: linear-gradient(270deg, rgba(2,145,63,1) 0%, rgba(54,191,83,1) 35%, rgba(108,197,43,1) 100%);
     align-self: flex-start;
+    color: #000;
 }
 
 .message.user {
@@ -588,9 +606,9 @@ box-shadow: 0 0 40px 2px var(--verdeModoAhorro)
 }
 
 #sendButton {
-    border: 1px solid #36BF53;
+    border: 1px solid var(--verdeModoAhorro);
     border-radius: 6px;
-    background-color: #36BF53;
+    background: linear-gradient(252deg, rgba(2,145,63,1) 0%, rgba(54,191,83,1) 35%, rgba(108,197,43,1) 100%);
     color: white;
     cursor: pointer;
     transition: all 0.5s;
