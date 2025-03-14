@@ -36,9 +36,9 @@ body {
     padding-top: 100px;
 }
 
-#home .row {
+/* #home .row {
 margin: 4rem;
-}
+} */
 
 /* Preloader */
 #preloader-container {
@@ -88,21 +88,21 @@ margin: 4rem;
 /* presentacion-beneficios */
 
 
-#beneficios {
-    /* background: radial-gradient(circle, rgba(54,191,83,1) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%); */
-}
+/* #beneficios {
+    background: radial-gradient(circle, rgba(54,191,83,1) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%);
+} */
 
 #beneficios .row {
-    margin: 12rem;
+    margin: 12rem auto;
 }
 #beneficios .card-body{
     margin: 3rem;
 }
 
 #beneficios .card {
-     
-    
     background: var(--verdeModoAhorro);
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
     
@@ -242,15 +242,12 @@ background: var(--verdeModoAhorro); */
     background: #fff;
 
 }
-.cardes{
-	display: flex;
-	justify-content: space-between;
-    
-}
 
 .cardes .carde {
-	width: 30%;
+	/* width: 30%; */
 	cursor: pointer;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .carde:hover .front {
 	background: #fff;
@@ -530,7 +527,7 @@ background: var(--verdeModoAhorro); */
 
 
 .texto-degradado {
-	
+	box-sizing: unset;
 	background: linear-gradient(265deg, #000 20%, var(--rojo) 50%, var(--naranja)  55% ,var(--amarilloDos) 60%, var(--verdeModoAhorro) 75%, #000 90%) 0% 0% no-repeat padding-box;;
 	background-clip: text;
 	--webkit-background-clip: text;
@@ -612,10 +609,11 @@ background: var(--verdeModoAhorro); */
     color: white;
     cursor: pointer;
     transition: all 0.5s;
+    text-decoration: none;
 }
 
 #sendButton:hover {
-    background-color: #02913F;
+    box-shadow: 0 0 40px 2px var(--verdeModoAhorro);
 }
 
 .buttonWaiting {
@@ -643,6 +641,16 @@ background: var(--verdeModoAhorro); */
 /***********************/
 /*     Request     */
 /***********************/
+.form-control, .form-select {
+    border-color: #36BF53;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #36BF53;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(54,191,83,.25);
+}
+
 .boxwsp-form-control-input, .boxwsp-form-control-select {
     width: 100%;
     padding: 10px;
