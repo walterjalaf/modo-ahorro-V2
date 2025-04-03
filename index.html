@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.png">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap, CSS and Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Modo Ahorro</title>
   </head>
@@ -34,7 +35,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-lg" id="navbar">
       <div class="container-fluid">
           <a class="navbar-brand logo-image logo-container" href="index.html">
-              <img src="images/logo.png" alt="Logo Modo Ahorro" class="logo" style="width: 200px; height: auto;">
+              <img src="images/logoMA.png" alt="Logo Modo Ahorro" class="logo" style="width: 200px; height: auto;">
           </a>
           <!-- Mobile Menu Toggle Button -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +60,7 @@
                     <a class="nav-link" href="#">Academia</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Chatbot</a>
+                    <a class="nav-link" href="modito.html">Chatbot</a>
                   </li>
                   <li class="nav-item">
                     <a class="btn btn-outline-secondary" href="#request">Contacto</a>
@@ -215,7 +216,7 @@
       <div class="row">
         <div class="text-center">
           <h2>MODO AHORRO DIAGNOSTICO</h2>
-          <p>Conocé al alcance de un diagnóstico energético, nuestro equipod e ingeniería se encargará de los siguientes pasos.</p>
+          <p>Conocé al alcance de un diagnóstico energético, nuestro equipo de ingeniería se encargará de los siguientes pasos.</p>
         </div>
       </div>
       <div class="cardes row">
@@ -281,13 +282,19 @@
 <!-- Contacto -->
  <section id="request" class="form-1">
   <div class="container">
+    <div class="text-center mb-5">
+      <h2>Contáctese rápidamente por WhatsApp</h2>
+    </div>
     <div class="row">
-      <div class="col-xl-3 col-lg-3 col-md-2 col-sm-1 col-xs-1"></div>
-      <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-xs-10">
+      <div class="col-sm-3">
+        <div class="text-center mb-5">
+          <a href="https://wa.me/+54264154533704?text=Hola, deseo realizar una consulta sobre Modo Ahorro" target="_blank">
+            <img id="whatsapp-ma" src="images/LogoWhatsappMA.png" alt="Whatsapp Modo Ahorro">
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-7 offset-sm-1">
         <div class="container">
-          <div class="text-center">
-            <h2>Contáctese rápidamente por WhatsApp</h2>
-          </div>
           <form id="boxwsp-requestForm" data-toggle="validator" data-focus="false">
             <!-- Viejo -->
 
@@ -312,7 +319,7 @@
             </div>
             <div class="boxwsp-form-group" id="boxwsp-diagnosticoOptions" style="display: none;" >
               <label>Seleccione el tipo de inmueble:</label>
-              <select class="boxwsp-form-control-select" id="boxwsp-inmuebleSelect">
+              <select class="form-select" id="boxwsp-inmuebleSelect">
                 <option class="boxwsp-select-option" value="Hogar">Hogar</option>
                 <option class="boxwsp-select-option" value="Comercio">Comercio</option>
                 <option class="boxwsp-select-option" value="Pyme pequeña">Pyme de
@@ -371,26 +378,18 @@
           
           <!-- end omar -->
           
-                 
-
-
-
-            
             <div class="row">
               
                <div class="col-12">
                 <div class="boxwsp-form-group">
                   <button type="button" class="boxwsp-button" id="boxwsp-whatsappButton">
                     <strong> Enviar consulta a WhatsApp</strong>
-                      
-                      
                   </button>
                 </div>
                </div>
               
-              
             </div>
-        </form>
+          </form>
 
         </div>
       </div>
@@ -398,37 +397,27 @@
 
     </div>
 
-
-
   </div>
 
  </section>
 <!-- end Contacto -->
+
+  <footer id="footer-down">
+    <ul class="social-icon">    
+      <li class="instagram hvr-pulse">
+        <a href="https://www.instagram.com/" target="_blank">
+          <i class="fa bi-instagram"></i>
+        </a>
+      </li>
+      <li class="instagram hvr-pulse">
+        <a href="https://www.linkedin.com/" target="_blank">
+          <i class="fa bi-linkedin"></i>
+        </a>
+      </li>  
+    </ul>
+    <p class="footer-text"> &copy; Copyright 2025 Modo Ahorro - Creado por: <a href="" target="_blank">Xamanen</a> </p>
+  </footer>
 </div> <!-- End of Scrollspy -->
-
-<!-- sript wsp -->
-<script>
-  document.getElementById('boxwsp-rselect').addEventListener('change', function () {
-      var diagnosticoOptions = document.getElementById('boxwsp-diagnosticoOptions');
-      diagnosticoOptions.style.display = this.value === 'Diagnóstico Energético' ? 'block' : 'none';
-  });
-
-  document.getElementById('boxwsp-whatsappButton').addEventListener('click', function () {
-      var name = document.getElementById('boxwsp-rname').value;
-      var interest = document.getElementById('boxwsp-rselect').value;
-      var inmueble = document.getElementById('boxwsp-inmuebleSelect')?.value || '';
-
-      var message = interest === 'Diagnóstico Energético'
-          ? `Hola, soy ${name} y quiero consultar el servicio de ${interest} para ${inmueble}.`
-          : `Hola, soy ${name} y estoy interesado en ${interest}.`;
-
-      var whatsappUrl = `https://wa.me/+54264154533704?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
-  });
-</script>
-
-
-
 
 <!-- validates forms --> 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

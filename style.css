@@ -33,7 +33,7 @@ body {
 }
 
 #home, #beneficios, #fases-diagnostico, #request {
-    padding-top: 100px;
+    padding-top: 10px;
 }
 
 /* #home .row {
@@ -641,6 +641,12 @@ background: var(--verdeModoAhorro); */
 /***********************/
 /*     Request     */
 /***********************/
+#whatsapp-ma {
+    margin: 0px auto;
+    width: 10rem;
+    height: auto;
+}
+
 .form-control, .form-select {
     border-color: #36BF53;
 }
@@ -695,3 +701,82 @@ background: var(--verdeModoAhorro); */
 }
 
 
+/***********************/
+/*     Footer     */
+/***********************/
+#footer {
+	text-align:center;
+}
+#footer .bg-sec h2 {
+	color:#FFFFFF;
+	font-size:25px;
+	font-weight:normal;
+}
+#footer-down {
+	position:relative;
+	top:30px;
+	text-align:center;
+}
+#footer-down h2 {
+	color:#444;
+	margin:20px 0px 40px 0px;
+	text-transform:none;
+}
+#footer-down ul li {
+	display:inline-block;
+	margin-right:20px;
+}
+#footer-down ul li a i.fa {
+	color:#999;
+	font-size:27px;
+	border:2px solid #999;
+	border-radius:50px;
+	padding:25%;
+}
+#footer-down ul li.instagram i.fa:hover {
+	color:var(--verdeoscuro);
+	border:2px solid var(--verdeoscuro);
+}
+.footer-text {
+	font-size: 12px;
+}
+
+/* ========================================================================
+  Hover animation 
+ ========================================================================== */
+ @-webkit-keyframes hvr-pulse {
+    25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+   }
+    75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+   }
+   }
+   @keyframes hvr-pulse {
+    25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+   }
+    75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+   }
+   }
+   .hvr-pulse {
+       display: inline-block;
+       vertical-align: middle;
+       -webkit-transform: translateZ(0);
+       transform: translateZ(0);
+       box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+       -webkit-backface-visibility: hidden;
+       backface-visibility: hidden;
+       -moz-osx-font-smoothing: grayscale;
+   }
+   .hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+       animation-name: hvr-pulse;
+       animation-duration: 2s;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
+   }
