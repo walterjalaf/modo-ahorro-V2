@@ -12,6 +12,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css"><!-- MODIFICACION RAIZ PARA QUE PUEDA VER LOCALMENTE Y MODIFICARLO -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <title>Modo Ahorro</title>
 </head>
 
@@ -60,9 +61,6 @@
           <li class="nav-item">
             <a class="btn btn-outline-secondary" href="#contacto">Contacto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="modito.html">Chatbot</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -73,28 +71,44 @@
   <!-- Scrollspy -->
   <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" data-bs-smooth-scroll="true" tabindex="0">
 
-    <!--  Inicio -->
-    <div id="home">
-      <div class="container">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-14 col-md-7 col-lg-7">
-              <div class="titulo-home">
-                <h1><strong>Optimizá el consumo energético de <div class="texto-degradado">tu hogar, comercio o empresa.
-                    </div></strong></h1>
-                <p> Nuestro enfoque innovador, combinado con la ayuda de un bot entrenado para la transición energética
-                  te permitirá elegir la mejor opción que se adapte a tus necesidades y presupuesto.</p>
-                <a href="modito.html" id="sendButton">Chatear con Modito</a>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-5 col-lg-5 align-self-center">
-              <img src="images/modito-1.png" id="moditoimg" class="img-fluid mb-5"></img>
-            </div>
+    <!--  Inicio  MODITO-->
+    <div class="inicio">
+      <div class="home">
+        <div class="div1">
+          <h1>
+            <div class="texto-degradado"> Hola, soy Modito. <br>
+              Un chatbot de Transición Energética </div>
+          </h1>
+        </div>
+        <div class="div2">
+          <h4> Consulte con nuestro chatbot acerca de alguna de las dudas frecuentes o formule una nueva pregunta para
+            conocer más sobre
+            nuestros servicios de transición energética.</h4>
+        </div>
+        <div class="div3" data-bs-toggle="modal" data-bs-target="#moditoModal"
+          data-bs-question="¿Cómo es el estudio, planificación e implementación de una gestoría energética?">
+          <h5 class="card-title">¿Cuáles son los beneficios que aporta reducir el consumo energético?</h5>
+        </div>
+        <div class="div4" data-bs-toggle="modal" data-bs-target="#moditoModal"
+          data-bs-question="¿Cómo es el estudio, planificación e implementación de una gestoría energética?">
+          <h5 class="card-title">¿Cómo es el estudio, planificación e implementación de una gestoría energética?</h5>
+        </div>
+        <div class="div5" data-bs-toggle="modal" data-bs-target="#moditoModal"
+          data-bs-question="¿Cuál es el propósito del monitoreo, y cómo se aplica?">
+          <h5 class="card-title">¿Cuál es el propósito del monitoreo, y cómo se aplica?</h5>
+        </div>
+        <div class="div6">
+          <div class="input-group mb-3">
+            <input type="text" id="chatQuestion" name="chatQuestion" class="form-control"
+              placeholder="Escriba su consulta..." aria-label="mensaje para el Chatbot" aria-describedby="chatButton">
+            <button id="chatButton" data-bs-toggle="modal" data-bs-target="#moditoModal" class="btn btn-outline-success"
+              type="button">Enviar</button>
           </div>
         </div>
+        <div class="div7"><img src="images/modito-new.png" id="moditoimg"  alt="Modito"></div>
       </div>
     </div>
-    <!-- end Inicio -->
+    <!-- end Inicio MODITO -->
 
     <!-- Presentación beneficios -->
     <div id="beneficios">
@@ -104,7 +118,6 @@
         </div>
         <div class="row">
           <article class="card text-center">
-
             <div class="card__content | flow">
               <div class="card__content--container | flow">
                 <h2 class="card__title">Reducción de costos inmediatos</h2>
@@ -117,7 +130,6 @@
             </div>
           </article>
         </div>
-
         <div class="row">
           <article class="card text-center">
 
@@ -135,16 +147,8 @@
           </article>
         </div>
         <!-- end Presentación beneficios -->
-
-
-
-
-
-
         <div class="row">
-
           <article class="card text-center">
-
             <div class="card__content | flow">
               <div class="card__content--container | flow">
                 <h2 class="card__title">Mayor vida útil de equipos</h2>
@@ -153,19 +157,11 @@
                   Evita sobrecargos y desgastes prematuros en tus dispositivos. Un uso eficiente alarga su durabilidad.
                 </p>
               </div>
-
             </div>
           </article>
-
-
-
-
         </div>
         <div class="row">
-
-
           <article class="card text-center">
-
             <div class="card__content | flow">
               <div class="card__content--container | flow">
                 <h2 class="card__title">Sostenibilidad y menos huella de carbono</h2>
@@ -174,101 +170,90 @@
                   Reduce tu impacto ambiental optimizando el uso de tu energía. Contribuye a un futuro más limpio.
                 </p>
               </div>
-
             </div>
           </article>
-
-
-
-
         </div>
-
       </div>
-
     </div>
     <!-- end  beneficios-->
 
     <!-- Fases-Diagnóstico -->
 
-
-    <!-- Fases -->
     <section id="fases-diagnostico">
       <div class="container">
         <div class="container-fluid">
           <div class="row">
             <div class="text-center">
-              <h2>MODO AHORRO DIAGNOSTICO</h2>
-              <p>Conocé al alcance de un diagnóstico energético, nuestro equipo de ingeniería se encargará de los
-                siguientes pasos.</p>
+              <div class="text-container">
+                <div class="texto-degradado" id="textodegradado">
+                  <h1>MODO AHORRO DIAGNÓSTICO<br> <br>
+                    Conocé el alcance de un diagnóstico energético, nuestro equipo de especialistas se encargará de los
+                    siguientes pasos
+                </div>
+                </h1>
+              </div>
+              <div class="cardes row">
+                <div class="carde col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                  <div class="front">
+                    <img src="images/libreta.png" alt="" style="width: 100px; height: 100px;">
+                    <h2>Relevamiento <br> Energético</h2>
+                  </div>
+                  <div class="back">
+                    <p>Organizamos los datos históricos de consumo de la empresa y y clasificamos la energía utilizada
+                      para
+                      identificar áreas clave.</p>
+                  </div>
+                </div>
+                <div class="carde col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                  <div class="front">
+                    <img src="images/infra.png" alt="" style="width: 100px; height: 100px;">
+                    <h2>Evaluación <br> de Infraestructura</h2>
+
+                  </div>
+                  <div class="back">
+
+                    <p>Realizamos una evaluación de las infraestructuras físicas, detectando ineficiencia en los
+                      sistemas
+                      eléctricos, iluminación, calefacción, ventilación, refrigeración y otros
+                      aspectos relevantes para el consumo energético</p>
+                  </div>
+                </div>
+                <div class="carde col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                  <div class="front">
+                    <img src="images/mejora.png" alt="" style="width: 100px; height: 100px;">
+                    <h2>Sugerencias <br> y Mejoras</h2>
+                  </div>
+                  <div class="back">
+
+                    <p>Generamos recomendaciones específicas para cada energía utilizada por la empresa y plasmamos un
+                      reporte de ahorro estimado.</p>
+                  </div>
+                </div>
+                <div class="carde col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                  <div class="front">
+                    <img src="images/informe.png" alt="" style="width: 100px; height: 100px;">
+                    <h2>Informe <br> Técnico</h2>
+                  </div>
+                  <div class="back">
+                    <p>Estos informes están diseñados para facilitar la toma de decisiones informadas en todos los
+                      niveles
+                      de la organización y hacer un seguimiento de las mejoras.</p>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
-          <div class="cardes row">
-            <div class="carde col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-              <div class="front">
-                <img src="images/libreta.png" alt="" style="width: 100px; height: 100px;">
-                <h2>Relevamiento <br> Energético</h2>
-              </div>
-              <div class="back">
-                <p>Organizamos los datos históricos de consumo de la empresa y y clasificamos la energía utilizada para
-                  identificar áreas clave.</p>
-              </div>
-            </div>
-            <div class="carde col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-              <div class="front">
-                <img src="images/infra.png" alt="" style="width: 100px; height: 100px;">
-                <h2>Evaluación de Infraestructura</h2>
-
-              </div>
-              <div class="back">
-
-                <p>Realizamos una evaluación de las infraestructuras físicas, detectando ineficiencia en los sistemas
-                  eléctricos, iluminación, calefacción, ventilación, refrigeración y otros
-                  aspectos relevantes para el consumo energético</p>
-              </div>
-            </div>
-            <div class="carde col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-              <div class="front">
-                <img src="images/mejora.png" alt="" style="width: 100px; height: 100px;">
-                <h2>Sugerencias <br> y Mejoras</h2>
-              </div>
-              <div class="back">
-
-                <p>Generamos recomendaciones específicas para cada energía utilizada por la empresa y plasmamos un
-                  reporte de ahorro estimado.</p>
-              </div>
-            </div>
-            <div class="carde col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-              <div class="front">
-                <img src="images/informe.png" alt="" style="width: 100px; height: 100px;">
-                <h2>Informe <br> Técnico</h2>
-              </div>
-              <div class="back">
-                <p>Estos informes están diseñados para facilitar la toma de decisiones informadas en todos los niveles
-                  de la organización y hacer un seguimiento de las mejoras.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- end Fases -->
-
-    <!-- modito-->
-
-
-
-    <!-- fin modito -->
-
-
-
-    <!-- Contacto -->
 
     <!-- Contacto -->
     <section id="contacto" class="form-1">
       <div class="container">
         <div class="text-center mb-5">
+          <br>
+          <br>
           <h2>Contáctese rápidamente por WhatsApp</h2>
         </div>
         <div class="row">
@@ -284,13 +269,11 @@
             <div class="container">
               <form id="boxwsp-requestForm" data-toggle="validator" data-focus="false">
                 <!-- Viejo -->
-
                 <div class="boxwsp-form-group">
                   <!-- boxwsp-form-control-input  -->
                   <input type="text" class="form-control" id="boxwsp-rname" placeholder="Escriba su nombre" name="rname"
                     required>
                 </div>
-
                 <div class="boxwsp-form-group">
                   <!-- boxwsp-form-control-select -->
                   <select class="form-select" id="boxwsp-rselect" required>
@@ -302,7 +285,6 @@
                     <option class="boxwsp-select-option" value="Diagnóstico Energético">
                       Diagnóstico Energético</option>
                   </select>
-
                 </div>
                 <div class="boxwsp-form-group" id="boxwsp-diagnosticoOptions" style="display: none;">
                   <label>Seleccione el tipo de inmueble:</label>
@@ -318,7 +300,6 @@
                   </select>
                 </div>
                 <div class="row">
-
                   <div class="col-12">
                     <div class="boxwsp-form-group">
                       <button type="button" class="boxwsp-button" id="boxwsp-whatsappButton">
@@ -326,54 +307,29 @@
                       </button>
                     </div>
                   </div>
-
                 </div>
               </form>
-
             </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-2 col-sm-1 col-xs-1"></div>
-
         </div>
-
       </div>
-
     </section>
     <!-- end Contacto -->
-
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quiénes Somos</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <section id="quienes-somos">
-            <div class="container">
-                <h1 class="quienes-h1">Quiénes Somos</h1>
-                Somos un grupo de jóvenes emprendedore impulsados por la energía del cambio y la convicción de que podemos marcar la diferencia,
-                Con una sólida formación, y tambien en conjunto con un profesionales en ingeniería y arquitectura unido a un profundo compromiso con la sostenibilidad, hemos creado <strong>Modo Ahorro</strong>, una empresa dedicada a optimizar el consumo energético de hogares, comercios y empresas.
-                En un mundo donde la eficiencia energética es clave, nuestro objetivo es ayudar a nuestros clientes a reducir costos y minimizar su huella de carbono.
-                Nuestra idea ha sido premiada por el <strong>ANR de la provincia de San Juan</strong>, brindándonos el respaldo necesario para hacer realidad nuestro proyecto.</p>
-  
-                
-                <div class="mision">
-                    <h2 class="quienes-h1">Nuestra Misión</h2>
-                    <ul>
-                        <li>Optimizar costos y reducir el gasto energético.</li>
-                        <li>Cuidar el planeta con soluciones sostenibles.</li>
-                        <li>Garantizar un futuro responsable para nuevas generaciones.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </body>
-    </html>
-
-
-
+    <section id="quienes-somos">
+      <div class="container">
+        <h1 class="quienes-h1">Quiénes Somos</h1>
+        Somos un grupo de jóvenes emprendedore impulsados por la energía del cambio y la convicción de que podemos
+        marcar la diferencia,
+        Con una sólida formación, y tambien en conjunto con un profesionales en ingeniería y arquitectura unido a un
+        profundo compromiso con la sostenibilidad, hemos creado <strong>Modo Ahorro</strong>, una empresa dedicada a
+        optimizar el consumo energético de hogares, comercios y empresas.
+        En un mundo donde la eficiencia energética es clave, nuestro objetivo es ayudar a nuestros clientes a reducir
+        costos y minimizar su huella de carbono.
+        Nuestra idea ha sido premiada por el <strong>ANR de la provincia de San Juan</strong>, brindándonos el respaldo
+        necesario para hacer realidad nuestro proyecto.</p>
+      </div>
+    </section>
     <footer id="footer-down">
       <ul class="social-icon">
         <li class="instagram hvr-pulse">
@@ -391,14 +347,10 @@
           target="_blank">GrupoXamanen</a> </p>
     </footer>
   </div> <!-- End of Scrollspy -->
-
   <!-- validates forms -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="js/script.js"></script> <!-- Custom scripts -->
-
-
 </body>
-
 </html>
