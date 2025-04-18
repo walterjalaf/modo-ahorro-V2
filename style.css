@@ -9,7 +9,8 @@
     --naranja: #FF850E;
     --rojo: #FF1222;
     --bordo: #B51A15;
-    --negro: #080e0be8 --black: hsl(0, 0%, 0%);
+    --negro: #080e0be8 
+    --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     /* Fonts */
     --font-title: "Montserrat", sans-serif;
@@ -24,6 +25,8 @@ body {
     font-family: "Inter-Medium", sans-serif;
     /* background: rgb(255,255,255);
     background: linear-gradient(292deg, rgba(255,255,255,1) 0%, rgba(54,191,83,1) 31%, rgba(255,255,255,1) 62%); */
+    
+    background: linear-gradient(292deg, rgba(255,255,255,1) 0%, rgba(54,191,83,1) 50%, rgba(255,255,255,1) 100%);
 }
 
 
@@ -34,6 +37,8 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #fff;
     width: 100vw;
     height: 100vh;
@@ -156,12 +161,12 @@ body {
 
 /* Home */
 #home .titulo-home {
-    margin: 18rem 4rem 4rem 4rem;
+    margin: 10rem 4rem 4rem 4rem;
 }
 
 #home .row {
-    margin-top: 12rem;
-    margin-bottom: 16rem;
+    margin-top: 0;
+    margin-bottom: 3rem;
 }
 
 #moditoimg {
@@ -170,12 +175,18 @@ body {
     height: auto;
 }
 
+.chatbot {
+    background-color: #fff;
+}
+
+#chatbot, #beneficios, #fases-diagnostico, #quienes-somos, #contacto {
+    padding-top: 5rem;
+}
 
 /* presentacion-beneficios */
 
 
 #beneficios {
-    padding-top: 0.5rem;
     padding-bottom: 7rem;
 }
 
@@ -296,12 +307,10 @@ body {
     }
 
     #fases-diagnostico {
-        padding-top: 2rem;
         padding-bottom: 10rem;
     }
 
     #contacto {
-        padding-top: 10rem;
         padding-bottom: 2rem;
     }
 
@@ -309,12 +318,19 @@ body {
         width: 80%;
         margin: auto;
         text-align: center;
-        padding: 50px 20px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     #quienes-somos ul {
         list-style: none;
         padding: 0;
+        margin-top: 10px;
+    }
+
+    #quienes-somos ul li {
+        margin-top: 10px;
     }
     
     .quienes-h1 {
@@ -581,7 +597,7 @@ background: var(--verdeModoAhorro); */
     }
 }
 
-*/ .titulo-home {
+.titulo-home {
     padding-bottom: 30px;
     /* Más espacio debajo del texto */
 }
@@ -695,8 +711,19 @@ background: var(--verdeModoAhorro); */
     ;
     background-clip: text;
     --webkit-background-clip: text;
-    color: transparent;
+    /* color: transparent; */
 
+}
+
+@media (prefers-color-scheme: dark) {
+    .texto-degradado {
+        box-sizing: unset;
+        background: linear-gradient(265deg, #000 20%, var(--rojo) 50%, var(--naranja) 55%, var(--amarilloDos) 60%, var(--verdeModoAhorro) 75%, #000 90%) 0% 0% no-repeat padding-box;
+        ;
+        background-clip: text;
+        --webkit-background-clip: text;
+        color: transparent;
+    }
 }
 
 .card-options-1 h4 {
@@ -964,7 +991,6 @@ background: var(--verdeModoAhorro); */
 
 #footer-down {
     position: relative;
-    top: 30px;
     text-align: center;
 }
 

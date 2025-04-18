@@ -52,6 +52,9 @@
             <a class="nav-link active" href="#home">Inicio</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#chatbot">Chatbot</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#beneficios">Beneficios</a>
           </li>
           <li class="nav-item">
@@ -59,9 +62,6 @@
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-secondary" href="#contacto">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="modito.html">Chatbot</a>
           </li>
         </ul>
       </div>
@@ -71,20 +71,19 @@
 
   <!-- header modito  -->
   <!-- Scrollspy -->
-  <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" data-bs-smooth-scroll="true" tabindex="0">
+  <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="-50" data-bs-smooth-scroll="true" tabindex="0">
 
     <!--  Inicio -->
-    <div id="home">
+    <section id="home">
       <div class="container">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-sm-14 col-md-7 col-lg-7">
+            <div class="col-sm-12 col-md-7 col-lg-7">
               <div class="titulo-home">
                 <h1><strong>Optimizá el consumo energético de <div class="texto-degradado">tu hogar, comercio o empresa.
                     </div></strong></h1>
                 <p> Nuestro enfoque innovador, combinado con la ayuda de un bot entrenado para la transición energética
                   te permitirá elegir la mejor opción que se adapte a tus necesidades y presupuesto.</p>
-                <a href="modito.html" id="sendButton">Chatear con Modito</a>
               </div>
             </div>
             <div class="col-sm-12 col-md-5 col-lg-5 align-self-center">
@@ -93,11 +92,111 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- end Inicio -->
 
+    <!-- Seccion Modito -->
+<section id="chatbot" class="chatbot">
+  <div class="header-content">
+      <div class="container" >
+          <div class="row">
+              <div class="col-12">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="text-container">
+                              <h1><div class="texto-degradado"> Hola, soy Modito. <br>
+                                   Un chatbot de Transición Energética </div> </h1>
+                          </div> <!-- end of text-container -->
+                      </div> <!-- end of col -->                            
+                  </div> <!-- end of row -->
+                  <div class="row">
+                      <div class="col-lg-8">
+                          <h3>Consulte acerca de alguna de las dudas frecuentes o formule una nueva pregunta para conocer más sobre nuestros servicios de transición energética.</h3>
+                                                        
+                      </div>
+                  </div>
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+                      <!-- <div class="option col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> -->
+                        <div class="card text-center" data-bs-toggle="modal" data-bs-target="#moditoModal" data-bs-question="¿Cuál es la finalidad de hacer una gestoría energética?">
+                          <div class="card-body">
+                            <h5 class="card-title">¿Cuál es la finalidad de hacer una gestoría energética?</h5>
+                          </div>
+                        </div>
+                        
+                      <!-- </div> -->
+                      <!-- <div class="option col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> -->
+                        
+                        <div class="card text-center" data-bs-toggle="modal" data-bs-target="#moditoModal" data-bs-question="¿Cuáles son los beneficios que aporta reducir el consumo energético?">
+                          <div class="card-body">
+                            <h5 class="card-title">¿Cuáles son los beneficios que aporta reducir el consumo energético?</h5>
+                          </div>
+                        </div>
+                        
+                      <!-- </div> -->
+                      <!-- <div class="option col-12 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> -->
+                        
+                        <div class="card text-center" data-bs-toggle="modal" data-bs-target="#moditoModal" data-bs-question="¿Cómo es el estudio, planificación e implementación de una gestoría energética?">
+                          <div class="card-body">
+                            <h5 class="card-title">¿Cómo es el estudio, planificación e implementación de una gestoría energética?</h5>
+                          </div>
+                        </div>
+                      <!-- </div> -->
+                      <!-- <div class="option col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> -->
+                        <div class="card text-center" data-bs-toggle="modal" data-bs-target="#moditoModal" data-bs-question="¿Cuál es el propósito del monitoreo, y cómo se aplica?">
+                          <div class="card-body">
+                            <h5 class="card-title">¿Cuál es el propósito del monitoreo, y cómo se aplica?</h5>
+                          </div>
+                        </div>
+                          
+                      <!-- </div> -->
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="text" id="chatQuestion" name="chatQuestion" class="form-control" placeholder="Escriba su consulta..." aria-label="mensaje para el Chatbot" aria-describedby="chatButton">
+                    <button id="chatButton" data-bs-toggle="modal" data-bs-target="#moditoModal" class="btn btn-outline-success" type="button">Enviar</button>
+                  </div>
+              </div>
+              
+          </div>
+      </div> <!-- end of container -->
+  </div> <!-- end of header-content -->
+</section> <!-- end of section -->
+<!-- end of header -->
+
+<!-- Modal del chatbot -->
+<div class="modal fade modal-xl" id="moditoModal" tabindex="-1" role="dialog" aria-labelledby="Modal del chatbot Modito" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modito</h5> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="chat-container">
+              <div id="chatbox" class="chatbox">
+                  <div class="message bot">Hola! Soy Modito, un chatbot especializado en eficiencia energética, ¿En qué puedo ayudarte?</div>
+              </div>
+              <div id="loader">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              <div id="inputfield" class="inputfield">
+                  <input id="userInput" type="text" placeholder="Escribe un mensaje...">
+                  <button id="sendButton">
+                      Enviar
+                  </button>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- end of Modal del chatbot -->
+
+<!-- end header modito -->
+
+
     <!-- Presentación beneficios -->
-    <div id="beneficios">
+    <section id="beneficios">
       <div class="container">
         <div class="text-center">
           <h2>Conocé los beneficios <br> de un diagnóstico energético</h2>
@@ -185,7 +284,7 @@
 
       </div>
 
-    </div>
+    </section>
     <!-- end  beneficios-->
 
     <!-- Fases-Diagnóstico -->
@@ -255,12 +354,17 @@
 
     <!-- end Fases -->
 
-    <!-- modito-->
-
-
-
-    <!-- fin modito -->
-
+    <!-- Quienes Somos -->
+    <section id="quienes-somos">
+      <div class="container">
+          <h1 class="quienes-h1">Quiénes Somos</h1>
+          <p>Somos un grupo de jóvenes emprendedores impulsados por la energía del cambio y la firme convicción de que podemos marcar la diferencia.
+          Con una sólida formación, y trabajando en conjunto con un especialistas en ingeniería y arquitectura, hemos creado <strong>Modo Ahorro</strong>, una empresa profundamente comprometida con la sostenibilidad y dedicada a optimizar el consumo energético de hogares, comercios y empresas.
+          En un mundo donde la eficiencia energética se ha vuelto indispensable, nuestro propósito es ayudar a nuestros clientes a reducir costos y minimizar su huella de carbono.
+          Nuestra propuesta ha sido reconocida y beneficiada en el marco del <strong>Programa de Asistencia para la Innovación Productiva otorgado por la Agencia Calidad San Juan</strong>, lo que nos ha brindado el apoyo necesario para poder convertir nuestro proyecto en realidad.
+          </p>
+      </div>
+    </section>
 
 
     <!-- Contacto -->
@@ -341,39 +445,6 @@
     </section>
     <!-- end Contacto -->
 
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quiénes Somos</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <section id="quienes-somos">
-            <div class="container">
-                <h1 class="quienes-h1">Quiénes Somos</h1>
-                Somos un grupo de jóvenes emprendedore impulsados por la energía del cambio y la convicción de que podemos marcar la diferencia,
-                Con una sólida formación, y tambien en conjunto con un profesionales en ingeniería y arquitectura unido a un profundo compromiso con la sostenibilidad, hemos creado <strong>Modo Ahorro</strong>, una empresa dedicada a optimizar el consumo energético de hogares, comercios y empresas.
-                En un mundo donde la eficiencia energética es clave, nuestro objetivo es ayudar a nuestros clientes a reducir costos y minimizar su huella de carbono.
-                Nuestra idea ha sido premiada por el <strong>ANR de la provincia de San Juan</strong>, brindándonos el respaldo necesario para hacer realidad nuestro proyecto.</p>
-  
-                
-                <div class="mision">
-                    <h2 class="quienes-h1">Nuestra Misión</h2>
-                    <ul>
-                        <li>Optimizar costos y reducir el gasto energético.</li>
-                        <li>Cuidar el planeta con soluciones sostenibles.</li>
-                        <li>Garantizar un futuro responsable para nuevas generaciones.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </body>
-    </html>
-
-
-
     <footer id="footer-down">
       <ul class="social-icon">
         <li class="instagram hvr-pulse">
@@ -387,8 +458,9 @@
           </a>
         </li>
       </ul>
-      <p class="footer-text"> &copy; Copyright 2025 Modo Ahorro - Creado por: <a href=""
-          target="_blank">GrupoXamanen</a> </p>
+      <p class="footer-text"> &copy; Copyright 2025 Modo Ahorro  </p> 
+      <!-- - Creado por: <a href=""
+          target="_blank">GrupoXamanen</a> -->
     </footer>
   </div> <!-- End of Scrollspy -->
 
@@ -397,6 +469,8 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="js/script.js"></script> <!-- Custom scripts -->
+  <script src="https://js.puter.com/v2/"></script>
+  <script src="js/chatbot.js"></script>
 
 
 </body>
