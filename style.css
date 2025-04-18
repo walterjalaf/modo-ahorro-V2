@@ -22,7 +22,11 @@ body {
     margin: 0;
     font: 1rem/1.5 var(--bs-font-sans-serif);
     font-family: "Inter-Medium", sans-serif;
+    /* background: rgb(255,255,255);
+    background: linear-gradient(292deg, rgba(255,255,255,1) 0%, rgba(54,191,83,1) 31%, rgba(255,255,255,1) 62%); */
 }
+
+
 
 /* Preloader */
 #preloader-container {
@@ -151,121 +155,28 @@ body {
 }
 
 /* Home */
-.inicio  {
-    background-image: url(/images/verde.jpg);
-    width: 100%;
-}    
-.home {
-    padding-top: 15%;
-    padding-left: 15%; 
-    display: grid;
-    width: auto;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-    /*margin-top: 5rem;
-    margin-bottom: 1rem;*/
-} 
+#home .titulo-home {
+    margin: 18rem 4rem 4rem 4rem;
+}
+
+#home .row {
+    margin-top: 12rem;
+    margin-bottom: 16rem;
+}
 
 #moditoimg {
-    width: 100%; /* Ajusta a la anchura del contenedor */
-    height: auto; /* Mantén la proporción */
-    max-width: 100%;
-    object-fit: contain
+    width: 800px;
+    /* Ajusta según necesites */
+    height: auto;
 }
-
-.div1 {
-    grid-column: span 3 / span 3;
-    background-color: white;
-    border-radius: 5%;
-    border-style: dotted;
-    width: auto;    
-}
-
-.div2 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 2;   
-}
-.div3 {
-    grid-column-start: 1;
-    grid-row-start: 3;  
-    margin: 5px;
-}
-.div4 {
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-.div5 {
-    grid-column-start: 3;
-    grid-row-start: 3;
-}
-.div6 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 4;
-}
-.div7 {
-    grid-row: span 4 / span 4;
-    grid-column-start: 4;
-    grid-row-start: 1;
-    width:40vh;
-}
-
-@media (max-width: 480px) {
-
-    .container {
-        grid-template-columns: 1fr; 
-        gap: 5px; 
-    }
-
-    .item {
-        font-size: 14px; 
-    }
-}
-
-@media (max-width: 800px) {
-    #moditoimg {
-        display: none !important;
-        transition: all 0.3s ease-in-out;
-
-    }
-    .home {
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        height: 100vh; 
-        flex-direction: column; 
-        padding-right: 15%;
-        text-align: center;
-        width: 100%;
-    }
-    .div7 {
-        display: none; 
-    }
-
-    .div1, .div2, .div3, .div4, .div5, .div6  {
-        display: block; 
-        text-align: center;
-    }
-}
-
 
 
 /* presentacion-beneficios */
-#beneficios {
-    padding-top: 1.5rem;
-    padding-bottom: 7rem;
-    
-}
 
-#beneficios .text-center {
-    text-align: center;
-    padding-top: 150px;
-    margin-bottom: 2rem;
+
+#beneficios {
+    padding-top: 0.5rem;
+    padding-bottom: 7rem;
 }
 
 #beneficios .row {
@@ -274,8 +185,7 @@ body {
 }
 
 #beneficios .card {
-    background: linear-gradient(225deg, #a5d105 0%, #ff2600e8 100%);
-    /*background: var(--verdeModoAhorro);*/
+    background: var(--verdeModoAhorro);
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 0.625rem;
@@ -287,7 +197,7 @@ body {
     animation-name: show;
     animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
-    color: white;
+    color: #fff;
 }
 
 #beneficios .card__content {
@@ -305,30 +215,16 @@ body {
 #beneficios .card__description {
     text-shadow: 0 10px 20px rgb(0 0 0 / 18%);
     font-size: 20px;
-    color:#000
 }
 
 
 #beneficios .card__title {
+    /* position: relative; */
+    /* width: fit-content; */
     width: -moz-fit-content;
-    text-shadow: 0 10px 20px rgb(0 0 0 / 75%);
-    color: rgb(0, 0, 0);
+    /* Prefijo necesario para Firefox  */
+    text-shadow: 0 10px 20px rgb(0 0 0 / 18%);
 }
-
-#fases-diagnostico .text-center {
-    text-align: center;
-    padding-top: 150px;
-    margin-bottom: 2rem;
-} 
-
-#textodegradado {
-    background-color: #c8e6c9;
-}
-#fases-diagnostico .container-fluid {
-    margin-top: 5%;
-    border-radius: 5%;
-}
-
 
 @media (any-hover: hover) and (any-pointer: fine) {
     #beneficios .card__content {
@@ -336,6 +232,7 @@ body {
         transition: transform 500ms ease-out;
         transition-delay: 500ms;
     }
+
     #beneficios .card__title::after {
         opacity: 0;
         transform: scaleX(0);
@@ -343,32 +240,42 @@ body {
         transition-delay: 500ms;
         transform-origin: right;
     }
+
     #beneficios .card__background {
         transition: transform 500ms ease-in;
     }
+
     #beneficios .card__content--container> :not(.card__title),
     .card__button {
         opacity: 0;
         transition: transform 500ms ease-out, opacity 500ms ease-out;
     }
+
     #beneficios .card:hover,
     .card:focus-within {
         transform: scale(1.05);
         transition: transform 500ms ease-in;
-        background: linear-gradient(270deg, rgb(228, 106, 6) 0%, rgba(54, 191, 83, 1) 35%, rgba(108, 197, 43, 1) 100%);
+        background: linear-gradient(270deg, rgba(2, 145, 63, 1) 0%, rgba(54, 191, 83, 1) 35%, rgba(108, 197, 43, 1) 100%);
+
     }
+
     #beneficios .card:hover .card__content,
     .card:focus-within .card__content {
         transform: translateY(0);
         transition: transform 500ms ease-in;
+
     }
+
     #beneficios .card:focus-within .card__content {
         transition-duration: 0ms;
     }
+
     #beneficios .card:hover .card__background,
     .card:focus-within .card__background {
         transform: scale(1.3);
+
     }
+
     #beneficios .card:hover .card__content--container> :not(.card__title),
     .card:hover .card__button,
     .card:focus-within .card__content--container> :not(.card__title),
@@ -377,6 +284,7 @@ body {
         transition: opacity 50ms ease-in;
         transition-delay: 500ms;
     }
+
     #beneficios .card:hover .card__title::after,
     .card:focus-within .card__title::after {
         opacity: 1;
@@ -384,15 +292,17 @@ body {
         transform-origin: left;
         transition: opacity 50ms ease-in, transform 50ms ease-in;
         transition-delay: 50ms;
-    }
-    #fases-diagnostico {
-        padding-top: 2rem;
-        padding-bottom: 15rem;
+
     }
 
-    #contacto  {
-        background: linear-gradient(292deg, rgba(255,255,255,1) 0%, rgba(54,191,83,1) 50%, rgba(255,255,255,1) 100%);
-        width: 100%
+    #fases-diagnostico {
+        padding-top: 2rem;
+        padding-bottom: 10rem;
+    }
+
+    #contacto {
+        padding-top: 10rem;
+        padding-bottom: 2rem;
     }
 
     #quienes-somos .container {
@@ -408,7 +318,7 @@ body {
     }
     
     .quienes-h1 {
-        font-size: 2.1rem;
+        font-size: 2.5rem;
         color: #02913F;
     }
     #quienes-somos p {
@@ -438,6 +348,9 @@ body {
 #beneficios .card:hover {
     cursor: pointer;
     box-shadow: 0 0 40px 2px var(--verdeModoAhorro);
+    /* transition: opacity 50ms ease-in, transform 50ms ease-in;
+transition-delay: 50ms;
+background: var(--verdeModoAhorro); */
 }
 
 
@@ -445,17 +358,11 @@ body {
 
 /* fases-diagnostico*/
 
-#fases-diagnostico .container-fluid {
-    background-image: url(/modo-ahorro-V2/images/verde.jpg);
-    margin: 5%;
+#fases-diagnostico {
+    background: #fff;
+
 }
 
-#fases-diagnostico .text-center .h2 {
-    color: #fff;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
 .cardes .carde {
     /* width: 30%; */
     cursor: pointer;
@@ -465,16 +372,17 @@ body {
 
 .carde:hover .front {
     background: #fff;
-    box-shadow: 0 0 40px 2px orange;
-    box-shadow: 0 0 20px 1px rgba(0,0,0,0.5);
+    box-shadow: 0 0 40px 2px var(--verdeModoAhorro);
+    /* box-shadow: 0 0 20px 1px rgba(0,0,0,0.5); */
     transform: translateY(0);
     height: 250px;
-    margin-top: 25px;
 
 }
 
 .carde:hover .front h2 {
     color: #6D776F;
+
+
 }
 
 .carde:hover .back {
@@ -492,15 +400,16 @@ body {
     transform: translateY(100px);
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
     height: 250px;
+
 }
 
 .front h2 {
     color: #6D776F;
-    padding-top: 5px;
     font-size: 20px;
     transition: 0.5s;
     text-align: center;
     justify-content: center;
+
 }
 
 .back {
@@ -516,15 +425,33 @@ body {
     background: #fff;
     color: #6D776F;
 }
+
 .back h3 {
-    font-size: 22px;
+    font-size: 20px;
 
 }
+
 .back p {
     font-size: 15px;
     margin-top: 10px;
     color: #6D776F;
 }
+
+/* Media */
+@media (max-width: 1001px) {
+
+    /* .container{
+		width: 800px;
+	} */
+    .back h3 {
+        font-size: 30px;
+    }
+
+    .back p {
+        font-size: 14px;
+    }
+}
+
 .basic-1-2 {
     padding-top: 3.75rem;
     padding-bottom: 4rem;
@@ -538,6 +465,7 @@ body {
     margin: 0.5%;
     padding: 1.5%;
 }
+
 .basic-1-3 {
     padding-top: 3.75rem;
     padding-bottom: 4rem;
@@ -546,27 +474,35 @@ body {
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
     border-radius: 0 200px 0 200px;
 }
+
 .basic-1-3 .row {
     margin: 0.5%;
     padding: 1.5%;
 }
+
 .cta-3 {
     align-items: center;
     padding: 0.5%;
+
 }
+
+
+
 .img-fluid-dashboard {
     border-radius: 1rem;
     width: 100%;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
 }
+
 .img-fluid-dashboard:hover {
     scale: 1.1;
     cursor: pointer;
 }
 
-/* ************ Header Modito *********** *
+/* ************ Header Modito *********** */
 
-/* Header NO SE UTILIZA TODO*/
+
+/* Header */
 .header {
     background-color: #fff;
 
@@ -580,19 +516,13 @@ body {
 
 .header .container {
     background: #fff;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .header .text-container {
-    margin-bottom: 0.5rem;
-}
-
-.text-center .text-container {
-    background-color: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 20px 0 20px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
 }
 
 .header h1 {
@@ -607,7 +537,7 @@ body {
 .header h3 {
     margin-bottom: 2.5rem;
     font-size: 1.125rem;
-    line-height: 2.125rem; 
+    /* line-height: 2.125rem; */
     text-shadow: 0 10px 20px rgb(0 0 0 / 18%);
     padding-left: 1.25rem;
     color: #626262;
@@ -622,17 +552,6 @@ body {
     margin: 2.5rem;
 }
 
-#chatButton {
-    background-color: white;
-}
-
-
-
-.card {
-    height: 25%;
-    margin: auto; /* Centra la tarjeta */
-    padding: 25px; /* Reduce el espacio interno */
-}
 .icon {
     z-index: 2;
     position: relative;
@@ -662,15 +581,19 @@ body {
     }
 }
 
-/*
+*/ .titulo-home {
+    padding-bottom: 30px;
+    /* Más espacio debajo del texto */
+}
+
 #sendButton {
-    margin-top: 20rem;
+    margin-top: 75px auto;
     padding: 20px 25px;
     border: 2px solid #36BF53;
     border-radius: 8px;
     background: linear-gradient(135deg, #36BF53, #02913F);
     color: white;
-    font-size: 38px;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -701,7 +624,7 @@ body {
     background: linear-gradient(135deg, #02913F, #36BF53);
 }
 
-/* Efecto pulsante
+/* Efecto pulsante */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -719,7 +642,9 @@ body {
 #sendButton:focus {
     animation: pulse 1s infinite;
 }
-*/
+
+
+
 
 .header .barra {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
@@ -771,6 +696,7 @@ body {
     background-clip: text;
     --webkit-background-clip: text;
     color: transparent;
+
 }
 
 .card-options-1 h4 {
